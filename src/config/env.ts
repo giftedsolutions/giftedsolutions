@@ -25,16 +25,16 @@ class EnvironmentConfig {
 
   private constructor() {
     // Supabase configuration (optional - will use placeholder if not set)
-    this.supabaseUrl = this.getEnvVar('NEXT_PUBLIC_SUPABASE_URL', 'https://placeholder.supabase.co');
-    this.supabaseAnonKey = this.getEnvVar('NEXT_PUBLIC_SUPABASE_ANON_KEY', 'placeholder-key');
+    this.supabaseUrl = this.getEnvVar('NEXT_PUBLIC_SUPABASE_URL', 'https://gfflwmddooynaexotjtn.supabase.co');
+    this.supabaseAnonKey = this.getEnvVar('NEXT_PUBLIC_SUPABASE_ANON_KEY', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdmZmx3bWRkb295bmFleG90anRuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk4NDQxNTYsImV4cCI6MjA3NTQyMDE1Nn0.J7rGoFoW5yFZ60lf9rBtbAj9BzURx8siDEobFgmNt8M');
     
-    // Firebase configuration
-    this.firebaseApiKey = this.getEnvVar('NEXT_PUBLIC_FIREBASE_API_KEY');
-    this.firebaseAuthDomain = this.getEnvVar('NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN');
-    this.firebaseProjectId = this.getEnvVar('NEXT_PUBLIC_FIREBASE_PROJECT_ID');
-    this.firebaseStorageBucket = this.getEnvVar('NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET');
-    this.firebaseMessagingSenderId = this.getEnvVar('NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID');
-    this.firebaseAppId = this.getEnvVar('NEXT_PUBLIC_FIREBASE_APP_ID');
+    // Firebase configuration with defaults
+    this.firebaseApiKey = this.getEnvVar('NEXT_PUBLIC_FIREBASE_API_KEY', 'AIzaSyBh04GVONeNfgvK5uR_8U9wDJ5oy2QqhiQ');
+    this.firebaseAuthDomain = this.getEnvVar('NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN', 'giftedsolutions-53124.firebaseapp.com');
+    this.firebaseProjectId = this.getEnvVar('NEXT_PUBLIC_FIREBASE_PROJECT_ID', 'giftedsolutions-53124');
+    this.firebaseStorageBucket = this.getEnvVar('NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET', 'giftedsolutions-53124.firebasestorage.app');
+    this.firebaseMessagingSenderId = this.getEnvVar('NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID', '708765156733');
+    this.firebaseAppId = this.getEnvVar('NEXT_PUBLIC_FIREBASE_APP_ID', '1:708765156733:web:3a830c02e784575c6a7814');
     this.adminEmail = this.getEnvVar('NEXT_PUBLIC_ADMIN_EMAIL', 'admin@giftedsolutions.com');
     
     // Business configuration with defaults

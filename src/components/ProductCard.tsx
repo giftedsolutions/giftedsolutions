@@ -30,40 +30,15 @@ export function ProductCard({ product }: ProductCardProps) {
   )}`;
 
   return (
-    <div className="bg-white p-4 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
-      {/* Product Image */}
-      <div className="h-32 mb-3 rounded-lg overflow-hidden flex items-center justify-center border border-gray-200 bg-gray-50 relative">
-        <Image
-          src={product.image_url || placeholderImage}
-          alt={product.name}
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
-          className="object-contain p-2"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.src = placeholderImage;
-          }}
-        />
+    <div className="bg-white p-5 rounded-xl shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.06)] flex justify-between items-start hover:ring-2 hover:ring-[#4b0082] transition duration-200">
+      <div className="flex-grow pr-4">
+        <p className="text-lg font-semibold text-gray-900 leading-tight">{product.name}</p>
       </div>
-
-      {/* Category Badge */}
-      <p className="text-xs text-gray-500 uppercase font-semibold mb-1">
-        {getShortCategoryName(product.category)}
-      </p>
-
-      {/* Product Name */}
-      <h3 className="text-lg font-bold text-gray-900 leading-snug mb-3 line-clamp-2">
-        {product.name}
-      </h3>
-
-      {/* Price and Action */}
-      <div className="flex justify-between items-center mt-auto pt-2 border-t border-gray-100">
-        <span className="text-2xl font-extrabold text-accent">
-          {formatCurrency(product.price)}
-        </span>
+      <div className="text-right flex-shrink-0">
+        <p className="text-2xl font-bold text-[#4b0082]">{formatCurrency(product.price)}</p>
         <button
           onClick={handleAddToCart}
-          className="text-sm px-3 py-1.5 text-white bg-primary rounded-lg hover:bg-primary-dark transition duration-200 shadow-md flex items-center gap-1"
+          className="mt-2 px-3 py-1 text-sm text-white bg-[#ffc107] hover:bg-[#ffb300] rounded-lg transition duration-200 font-semibold flex items-center gap-1"
           aria-label={`Add ${product.name} to cart`}
         >
           <Plus className="h-4 w-4" />

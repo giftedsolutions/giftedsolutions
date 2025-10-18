@@ -9,28 +9,13 @@ import { env } from '@/config/env';
  */
 export function Footer() {
   return (
-    <footer className="bg-gray-100 p-6 mt-12">
-      <div className="container mx-auto text-center text-sm text-gray-600">
-        <p className="font-bold text-primary mb-2">{env.businessName}</p>
-        <p>Location: {env.businessLocation}</p>
-        <p>
-          Contact (WhatsApp):{' '}
-          <a
-            href={`https://wa.me/${env.whatsappNumber}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
-          >
-            {env.whatsappNumber}
-          </a>
-        </p>
-        <p className="mt-3 text-xs">
-          Countrywide delivery available. Electronics Projects & Consultation Services Offered.
-        </p>
-        <p className="mt-2 text-xs text-gray-500">
-          &copy; {new Date().getFullYear()} {env.businessName}. All rights reserved.
-        </p>
-      </div>
+    <footer className="bg-[#4b0082] p-6 mt-8 text-center">
+      <p className="text-sm text-gray-200">
+        Countrywide delivery available. FREE delivery up to K50 (T&Cs apply).
+      </p>
+      <p className="text-xs text-gray-400 mt-2">
+        Website: <a href="https://giftedsolutions-53124.web.app/" target="_blank" rel="noopener noreferrer" className="hover:text-white underline">giftedsolutions-53124.web.app</a>
+      </p>
     </footer>
   );
 }

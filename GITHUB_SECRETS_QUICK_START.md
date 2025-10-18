@@ -32,6 +32,11 @@ VERCEL_ORG_ID = team_vw8jnMBNnHbqQFfefRoSzpLn
 VERCEL_PROJECT_ID = prj_R2jdmsb4XGrlCvRwDaG0LZcs3eMd
 ```
 
+#### GitHub Token (for reference - already used to push code)
+```
+GITHUB_TOKEN = <your-github-token-here>
+```
+
 #### Firebase Secrets (7)
 ```
 NEXT_PUBLIC_FIREBASE_API_KEY = AIzaSyBh04GVONeNfgvK5uR_8U9wDJ5oy2QqhiQ
