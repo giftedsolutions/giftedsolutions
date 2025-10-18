@@ -47,6 +47,7 @@ export { analytics };
  * Only these emails can access admin panel
  */
 export const ADMIN_EMAILS = [
+  'peternondo1@gmail.com',
   process.env.NEXT_PUBLIC_ADMIN_EMAIL || 'admin@giftedsolutions.com',
 ];
 

@@ -72,18 +72,38 @@ export function ProductGrid({ products, categories }: ProductGridProps) {
 
       {/* Search & Filter Bar */}
       <div className="bg-white p-4 mb-6 rounded-lg shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-2px_rgba(0,0,0,0.06)] sticky top-[68px] z-10">
-        <h2 className="text-xl font-bold text-gray-800 mb-4">Inventory Search & Filter</h2>
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-bold text-gray-800">Inventory Search & Filter</h2>
+          {/* Results Counter */}
+          <div className="text-sm text-gray-600">
+            <span className="font-semibold text-[#4b0082]">{filteredProducts.length}</span>
+            {' '}of {products.length} products
+          </div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {/* Search Input */}
-          <div className="md:col-span-2">
+          {/* Search Input with Icon */}
+          <div className="md:col-span-2 relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
             <input
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search component name (e.g., DHT11, relay, Nano)..."
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-[#4b0082] focus:border-[#4b0082]"
+              className="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:ring-[#4b0082] focus:border-[#4b0082] transition"
               aria-label="Search products"
             />
+            {/* Clear Search Button */}
+            {searchTerm && (
+              <button
+                onClick={() => setSearchTerm('')}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                aria-label="Clear search"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                </svg>
+              </button>
+            )}
           </div>
 
           {/* Category Filter */}
@@ -91,7 +111,7 @@ export function ProductGrid({ products, categories }: ProductGridProps) {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full p-3 border border-gray-300 rounded-lg bg-white focus:ring-[#4b0082] focus:border-[#4b0082]"
+              className="w-full p-3 border border-gray-300 rounded-lg bg-white focus:ring-[#4b0082] focus:border-[#4b0082] transition"
               aria-label="Filter by category"
             >
               <option value="All">All Categories</option>
@@ -103,6 +123,40 @@ export function ProductGrid({ products, categories }: ProductGridProps) {
             </select>
           </div>
         </div>
+
+        {/* Active Filters */}
+        {(searchTerm || selectedCategory !== 'All') && (
+          <div className="mt-3 flex gap-2 flex-wrap">
+            {searchTerm && (
+              <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#4b0082] text-white text-sm rounded-full">
+                Search: "{searchTerm}"
+                <button
+                  onClick={() => setSearchTerm('')}
+                  className="hover:bg-white/20 rounded-full p-0.5"
+                  aria-label="Remove search filter"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </button>
+              </span>
+            )}
+            {selectedCategory !== 'All' && (
+              <span className="inline-flex items-center gap-1 px-3 py-1 bg-[#ffc107] text-[#4b0082] text-sm rounded-full font-semibold">
+                {selectedCategory}
+                <button
+                  onClick={() => setSelectedCategory('All')}
+                  className="hover:bg-white/30 rounded-full p-0.5"
+                  aria-label="Remove category filter"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </button>
+              </span>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Product Grid */}
