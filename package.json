@@ -1,0 +1,46 @@
+{
+  "name": "gifted-solutions",
+  "version": "1.0.0",
+  "description": "E-commerce platform for electronics components and Arduino supplies",
+  "private": true,
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.13.1"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "supabase:generate-types": "supabase gen types typescript --project-id $SUPABASE_PROJECT_ID > src/types/supabase.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "firebase": "^11.10.0",
+    "lucide-react": "^0.469.0",
+    "next": "^15.1.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^4.0.5",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.14",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.6",
+    "@types/react-dom": "^19.0.3",
+    "autoprefixer": "^10.4.20",
+    "dotenv": "^17.2.3",
+    "eslint": "^9.31.0",
+    "eslint-config-next": "^15.1.3",
+    "postcss": "^8.4.49",
+    "prettier": "^3.6.2",
+    "supabase": "^2.51.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.5.2",
+    "vitest": "^3.2.4"
+  }
+}
