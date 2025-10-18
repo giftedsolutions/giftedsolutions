@@ -1,0 +1,33 @@
+{
+  "name": "Gifted Solutions - Electronics Shop",
+  "short_name": "Gifted Solutions",
+  "description": "Arduino and electronics components shop in Zambia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#4b0082",
+  "theme_color": "#4b0082",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["shopping", "electronics"],
+  "screenshots": [
+    {
+      "src": "/screenshot.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    }
+  ]
+}
+

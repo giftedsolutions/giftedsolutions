@@ -25,6 +25,18 @@ export const metadata: Metadata = {
     'Raspberry Pi',
   ],
   authors: [{ name: env.businessName }],
+  manifest: '/manifest.json',
+  themeColor: '#4b0082',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Gifted Solutions',
+  },
   openGraph: {
     title: `${env.businessName} - Arduino & Electronics Shop`,
     description: 'Your one-stop shop for Arduino and electronics components in Zambia',
@@ -39,6 +51,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <link rel="apple-touch-icon" href="/icon-192.png" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                  navigator.serviceWorker.register('/sw.js');
+                });
+              }
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-screen bg-[#fefefe] text-gray-900 antialiased">{children}</body>
     </html>
   );
