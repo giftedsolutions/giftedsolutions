@@ -48,16 +48,26 @@ export function ProductEditModal({ product, onClose, onSave }: ProductEditModalP
     setError('');
     setLoading(true);
 
+    console.log('💾 [ProductEditModal] Submitting product:', {
+      isEdit: !!product,
+      productId: product?.id,
+      formData,
+      hasImageFile: !!imageFile,
+    });
+
     try {
       let imageUrl = product?.image_url;
 
       // Upload new image if selected
       if (imageFile) {
+        console.log('📸 [ProductEditModal] Uploading new image...');
         // Delete old image if exists
         if (product?.image_url) {
+          console.log('🗑️ [ProductEditModal] Deleting old image:', product.image_url);
           await adminService.deleteProductImage(product.image_url);
         }
         imageUrl = await adminService.uploadProductImage(imageFile);
+        console.log('✅ [ProductEditModal] Image uploaded:', imageUrl);
       }
 
       const productData = {
@@ -66,16 +76,26 @@ export function ProductEditModal({ product, onClose, onSave }: ProductEditModalP
         price: Number(formData.price),
       };
 
+      console.log('📦 [ProductEditModal] Final product data:', productData);
+
       if (product) {
         // Update existing product
+        console.log('📝 [ProductEditModal] Updating existing product...');
         await adminService.updateProduct(product.id, productData);
       } else {
         // Create new product
+        console.log('➕ [ProductEditModal] Creating new product...');
         await adminService.createProduct(productData as any);
       }
 
+      console.log('✅ [ProductEditModal] Product saved successfully!');
       onSave();
     } catch (err: any) {
+      console.error('❌ [ProductEditModal] Failed to save product:', err);
+      console.error('❌ [ProductEditModal] Error details:', {
+        message: err.message,
+        stack: err.stack,
+      });
       setError(err.message || 'Failed to save product');
     } finally {
       setLoading(false);

@@ -15,6 +15,8 @@ export const adminService = {
     id: string,
     updates: Partial<Product>
   ): Promise<Product> {
+    console.log('📝 [AdminService] Updating product:', { id, updates });
+    
     const { data, error } = await supabase
       .from('products')
       .update(updates as any)
@@ -23,10 +25,15 @@ export const adminService = {
       .single();
 
     if (error) {
-      console.error('Error updating product:', error);
-      throw new Error('Failed to update product');
+      console.error('❌ [AdminService] Error updating product:', {
+        error,
+        id,
+        updates,
+      });
+      throw new Error(`Failed to update product: ${error.message}`);
     }
 
+    console.log('✅ [AdminService] Product updated successfully:', data);
     return data as Product;
   },
 
@@ -34,6 +41,8 @@ export const adminService = {
    * Create product
    */
   async createProduct(product: Omit<Product, 'id' | 'created_at' | 'updated_at'>): Promise<Product> {
+    console.log('➕ [AdminService] Creating product:', product);
+    
     const { data, error } = await supabase
       .from('products')
       .insert(product as any)
@@ -41,10 +50,14 @@ export const adminService = {
       .single();
 
     if (error) {
-      console.error('Error creating product:', error);
-      throw new Error('Failed to create product');
+      console.error('❌ [AdminService] Error creating product:', {
+        error,
+        product,
+      });
+      throw new Error(`Failed to create product: ${error.message}`);
     }
 
+    console.log('✅ [AdminService] Product created successfully:', data);
     return data as Product;
   },
 
@@ -52,21 +65,34 @@ export const adminService = {
    * Delete product (soft delete)
    */
   async deleteProduct(id: string): Promise<void> {
+    console.log('🗑️ [AdminService] Deleting product (soft delete):', { id });
+    
     const { error } = await supabase
       .from('products')
       .update({ is_active: false } as any)
       .eq('id', id);
 
     if (error) {
-      console.error('Error deleting product:', error);
-      throw new Error('Failed to delete product');
+      console.error('❌ [AdminService] Error deleting product:', {
+        error,
+        id,
+      });
+      throw new Error(`Failed to delete product: ${error.message}`);
     }
+    
+    console.log('✅ [AdminService] Product deleted successfully (is_active set to false)');
   },
 
   /**
    * Upload product image to Supabase Storage
    */
   async uploadProductImage(file: File): Promise<string> {
+    console.log('📸 [AdminService] Uploading product image:', {
+      fileName: file.name,
+      fileSize: `${(file.size / 1024).toFixed(2)} KB`,
+      fileType: file.type,
+    });
+    
     const fileExt = file.name.split('.').pop();
     const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`;
     const filePath = `${fileName}`;
@@ -79,14 +105,23 @@ export const adminService = {
       });
 
     if (error) {
-      console.error('Error uploading image:', error);
-      throw new Error('Failed to upload image');
+      console.error('❌ [AdminService] Error uploading image:', {
+        error,
+        fileName: file.name,
+        filePath,
+      });
+      throw new Error(`Failed to upload image: ${error.message}`);
     }
 
     // Get public URL
     const { data: { publicUrl } } = supabase.storage
       .from('product-images')
       .getPublicUrl(data.path);
+
+    console.log('✅ [AdminService] Image uploaded successfully:', {
+      filePath: data.path,
+      publicUrl,
+    });
 
     return publicUrl;
   },

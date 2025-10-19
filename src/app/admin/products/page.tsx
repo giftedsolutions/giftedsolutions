@@ -31,11 +31,39 @@ export default function AdminProductsPage() {
   }, [products, searchTerm, categoryFilter]);
 
   const loadProducts = async () => {
+    console.log('📦 [AdminProducts] Loading products...');
+    const startTime = Date.now();
+    
     try {
       setLoading(true);
       const data = await adminService.getAllProducts();
+      const endTime = Date.now();
+      
+      console.log('✅ [AdminProducts] Products loaded successfully:', {
+        count: data.length,
+        fetchTime: `${endTime - startTime}ms`,
+        timestamp: new Date().toISOString(),
+      });
+      console.log('📦 [AdminProducts] Sample products:', data.slice(0, 3).map(p => ({
+        id: p.id,
+        name: p.name,
+        category: p.category,
+        price: p.price,
+        image_url: p.image_url,
+        is_active: p.is_active,
+      })));
+      
       setProducts(data);
+      setError('');
     } catch (err: any) {
+      console.error('❌ [AdminProducts] Failed to load products:', err);
+      console.error('❌ [AdminProducts] Error details:', {
+        message: err.message,
+        code: err.code,
+        details: err.details,
+        hint: err.hint,
+        stack: err.stack,
+      });
       setError(err.message || 'Failed to load products');
     } finally {
       setLoading(false);
@@ -43,6 +71,12 @@ export default function AdminProductsPage() {
   };
 
   const filterProducts = () => {
+    console.log('🔍 [AdminProducts] Filtering products:', {
+      totalProducts: products.length,
+      searchTerm,
+      categoryFilter,
+    });
+    
     let filtered = products;
 
     if (categoryFilter !== 'All') {
@@ -58,6 +92,11 @@ export default function AdminProductsPage() {
       );
     }
 
+    console.log('✅ [AdminProducts] Filtered results:', {
+      filteredCount: filtered.length,
+      originalCount: products.length,
+    });
+
     setFilteredProducts(filtered);
   };
 
@@ -66,10 +105,19 @@ export default function AdminProductsPage() {
       return;
     }
 
+    console.log('🗑️ [AdminProducts] Deleting product:', { id: product.id, name: product.name });
+
     try {
       await adminService.deleteProduct(product.id);
+      console.log('✅ [AdminProducts] Product deleted successfully');
       await loadProducts();
     } catch (err: any) {
+      console.error('❌ [AdminProducts] Failed to delete product:', err);
+      console.error('❌ [AdminProducts] Error details:', {
+        message: err.message,
+        code: err.code,
+        productId: product.id,
+      });
       alert(err.message || 'Failed to delete product');
     }
   };
