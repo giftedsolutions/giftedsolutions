@@ -1,14 +1,13 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { ProductCard } from '@/components/ProductCard';
 import type { Product } from '@/types';
+import { useCartStore } from '@/store/cart';
 
 // Mock the cart store
+jest.mock('@/store/cart');
+
 const mockAddItem = jest.fn();
-jest.mock('@/store/cart', () => ({
-  useCartStore: () => ({
-    addItem: mockAddItem,
-  }),
-}));
+const mockUseCartStore = useCartStore as jest.MockedFunction<typeof useCartStore>;
 
 const mockProduct: Product = {
   id: '1',
@@ -27,6 +26,19 @@ const mockProduct: Product = {
 describe('ProductCard Component', () => {
   beforeEach(() => {
     mockAddItem.mockClear();
+    // Mock the selector pattern used by Zustand
+    mockUseCartStore.mockImplementation((selector: any) => {
+      const state = {
+        items: [],
+        addItem: mockAddItem,
+        removeItem: jest.fn(),
+        updateQuantity: jest.fn(),
+        clearCart: jest.fn(),
+        getItemCount: () => 0,
+        getTotal: () => 0,
+      };
+      return selector ? selector(state) : state;
+    });
   });
 
   it('renders product information correctly', () => {

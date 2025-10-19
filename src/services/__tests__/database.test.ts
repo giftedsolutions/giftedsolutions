@@ -33,11 +33,14 @@ describe('Product Service', () => {
       const mockChain = {
         select: jest.fn().mockReturnThis(),
         eq: jest.fn().mockReturnThis(),
-        order: jest.fn().mockResolvedValue({
-          data: mockProducts,
-          error: null,
-        }),
+        order: jest.fn().mockReturnThis(),
       };
+      
+      // The last order call should resolve with data
+      mockChain.order.mockResolvedValueOnce({
+        data: mockProducts,
+        error: null,
+      });
 
       (mockSupabase.from as jest.Mock).mockReturnValue(mockChain);
 
@@ -55,11 +58,14 @@ describe('Product Service', () => {
       const mockChain = {
         select: jest.fn().mockReturnThis(),
         eq: jest.fn().mockReturnThis(),
-        order: jest.fn().mockResolvedValue({
-          data: null,
-          error: mockError,
-        }),
+        order: jest.fn().mockReturnThis(),
       };
+      
+      // The last order call should resolve with error
+      mockChain.order.mockResolvedValueOnce({
+        data: null,
+        error: mockError,
+      });
 
       (mockSupabase.from as jest.Mock).mockReturnValue(mockChain);
 

@@ -50,16 +50,19 @@ jest.mock('firebase/analytics', () => ({
 }));
 
 // Mock Supabase
+const createSupabaseChain = () => ({
+  select: jest.fn().mockReturnThis(),
+  insert: jest.fn().mockReturnThis(),
+  update: jest.fn().mockReturnThis(),
+  delete: jest.fn().mockReturnThis(),
+  eq: jest.fn().mockReturnThis(),
+  order: jest.fn().mockReturnThis(),
+  single: jest.fn().mockResolvedValue({ data: null, error: null }),
+});
+
 jest.mock('@/lib/supabase', () => ({
   supabase: {
-    from: jest.fn(() => ({
-      select: jest.fn().mockReturnThis(),
-      insert: jest.fn().mockReturnThis(),
-      update: jest.fn().mockReturnThis(),
-      delete: jest.fn().mockReturnThis(),
-      eq: jest.fn().mockReturnThis(),
-      single: jest.fn().mockResolvedValue({ data: null, error: null }),
-    })),
+    from: jest.fn(() => createSupabaseChain()),
     storage: {
       from: jest.fn(() => ({
         upload: jest.fn(),
@@ -68,5 +71,21 @@ jest.mock('@/lib/supabase', () => ({
       })),
     },
   },
+}));
+
+// Mock cart store
+jest.mock('@/store/cart', () => ({
+  useCartStore: jest.fn((selector: any) => {
+    const state = {
+      items: [],
+      addItem: jest.fn(),
+      removeItem: jest.fn(),
+      updateQuantity: jest.fn(),
+      clearCart: jest.fn(),
+      getItemCount: () => 3,
+      getTotal: () => 0,
+    };
+    return selector ? selector(state) : state;
+  }),
 }));
 

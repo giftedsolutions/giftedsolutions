@@ -64,9 +64,12 @@ test.describe('Home Page', () => {
     // Wait for products to load
     await page.waitForSelector('section[class*="grid"]', { timeout: 10000 });
     
-    // Click the first product image/button
-    const firstProductButton = page.locator('button').first();
-    await firstProductButton.click();
+    // Wait a bit for React to hydrate
+    await page.waitForTimeout(1000);
+    
+    // Click on a product card area (find by product name and click it)
+    const productName = page.locator('text=Arduino').first();
+    await productName.click();
     
     // Check if modal is open (looking for modal elements)
     await expect(page.getByText(/Specifications/i)).toBeVisible({ timeout: 5000 });

@@ -1,0 +1,835 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - heading "Gifted Solutions Inventory" [level=1] [ref=e6]
+          - paragraph [ref=e7]: Bringing Ideas to Life
+        - button "Open shopping cart" [active] [ref=e8] [cursor=pointer]:
+          - img [ref=e9]
+    - dialog "Your Cart" [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - heading "Your Cart" [level=2] [ref=e17]
+          - button "Close cart" [ref=e18] [cursor=pointer]:
+            - img [ref=e19]
+        - paragraph [ref=e23]: Your cart is empty.
+    - main [ref=e24]:
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - img [ref=e28]
+          - generic [ref=e30]:
+            - text: "Contact:"
+            - strong [ref=e31]: "0779421717"
+        - generic [ref=e32]:
+          - img [ref=e33]
+          - generic [ref=e35]:
+            - text: "Location:"
+            - strong [ref=e36]: Lusaka, Chalala near ICU
+        - generic [ref=e37]:
+          - img [ref=e38]
+          - generic [ref=e40]:
+            - text: "Services:"
+            - strong [ref=e41]: Projects, Consultation, Support
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - heading "Inventory Search & Filter" [level=2] [ref=e44]
+          - generic [ref=e45]: 70 of 70 products
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - img [ref=e48]
+            - textbox "Search products" [ref=e51]:
+              - /placeholder: Search component name (e.g., DHT11, relay, Nano)...
+          - combobox "Filter by category" [ref=e53]:
+            - option "All Categories" [selected]
+            - option "A. DEVELOPMENT BOARDS"
+            - option "B. SENSORS & MODULES"
+            - option "C. DISPLAY & INTERFACE"
+            - option "D. COMMUNICATION"
+            - option "E. MOTORS & DRIVERS"
+            - option "F. RELAY & POWER CONTROL"
+            - option "G. POWER SUPPLY & REGULATORS"
+            - option "H. BREADBOARDS & MISC"
+            - option "I. OTHER COMPONENTS"
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - button "Arduino Mega Atmega2560 + Cable" [ref=e56] [cursor=pointer]:
+            - img "Arduino Mega Atmega2560 + Cable" [ref=e58]
+          - generic [ref=e59]:
+            - button "Arduino Mega Atmega2560 + Cable" [ref=e60] [cursor=pointer]:
+              - paragraph [ref=e61]: Arduino Mega Atmega2560 + Cable
+            - generic [ref=e62]:
+              - paragraph [ref=e63]: K1000
+              - button "Add Arduino Mega Atmega2560 + Cable to cart" [ref=e64] [cursor=pointer]:
+                - img [ref=e65]
+                - text: Add
+        - generic [ref=e66]:
+          - button "Arduino Nano + Cable" [ref=e67] [cursor=pointer]:
+            - img "Arduino Nano + Cable" [ref=e69]
+          - generic [ref=e70]:
+            - button "Arduino Nano + Cable" [ref=e71] [cursor=pointer]:
+              - paragraph [ref=e72]: Arduino Nano + Cable
+            - generic [ref=e73]:
+              - paragraph [ref=e74]: K450
+              - button "Add Arduino Nano + Cable to cart" [ref=e75] [cursor=pointer]:
+                - img [ref=e76]
+                - text: Add
+        - generic [ref=e77]:
+          - button "Arduino Nano Terminal Adapter" [ref=e78] [cursor=pointer]:
+            - img "Arduino Nano Terminal Adapter" [ref=e80]
+          - generic [ref=e81]:
+            - button "Arduino Nano Terminal Adapter" [ref=e82] [cursor=pointer]:
+              - paragraph [ref=e83]: Arduino Nano Terminal Adapter
+            - generic [ref=e84]:
+              - paragraph [ref=e85]: K250
+              - button "Add Arduino Nano Terminal Adapter to cart" [ref=e86] [cursor=pointer]:
+                - img [ref=e87]
+                - text: Add
+        - generic [ref=e88]:
+          - button "Arduino starter kit Mega Based" [ref=e89] [cursor=pointer]:
+            - img "Arduino starter kit Mega Based" [ref=e91]
+          - generic [ref=e92]:
+            - button "Arduino starter kit Mega Based" [ref=e93] [cursor=pointer]:
+              - paragraph [ref=e94]: Arduino starter kit Mega Based
+            - generic [ref=e95]:
+              - paragraph [ref=e96]: K2500
+              - button "Add Arduino starter kit Mega Based to cart" [ref=e97] [cursor=pointer]:
+                - img [ref=e98]
+                - text: Add
+        - generic [ref=e99]:
+          - button "Arduino Starter Kit UNO R3 Based" [ref=e100] [cursor=pointer]:
+            - img "Arduino Starter Kit UNO R3 Based" [ref=e102]
+          - generic [ref=e103]:
+            - button "Arduino Starter Kit UNO R3 Based" [ref=e104] [cursor=pointer]:
+              - paragraph [ref=e105]: Arduino Starter Kit UNO R3 Based
+            - generic [ref=e106]:
+              - paragraph [ref=e107]: K2000
+              - button "Add Arduino Starter Kit UNO R3 Based to cart" [ref=e108] [cursor=pointer]:
+                - img [ref=e109]
+                - text: Add
+        - generic [ref=e110]:
+          - button "Arduino Uno + USB Cable" [ref=e111] [cursor=pointer]:
+            - img "Arduino Uno + USB Cable" [ref=e113]
+          - generic [ref=e114]:
+            - button "Arduino Uno + USB Cable" [ref=e115] [cursor=pointer]:
+              - paragraph [ref=e116]: Arduino Uno + USB Cable
+            - generic [ref=e117]:
+              - paragraph [ref=e118]: K750
+              - button "Add Arduino Uno + USB Cable to cart" [ref=e119] [cursor=pointer]:
+                - img [ref=e120]
+                - text: Add
+        - generic [ref=e121]:
+          - button "Atmega 328P Microcontroller Set" [ref=e122] [cursor=pointer]:
+            - img "Atmega 328P Microcontroller Set" [ref=e124]
+          - generic [ref=e125]:
+            - button "Atmega 328P Microcontroller Set" [ref=e126] [cursor=pointer]:
+              - paragraph [ref=e127]: Atmega 328P Microcontroller Set
+            - generic [ref=e128]:
+              - paragraph [ref=e129]: K400
+              - button "Add Atmega 328P Microcontroller Set to cart" [ref=e130] [cursor=pointer]:
+                - img [ref=e131]
+                - text: Add
+        - generic [ref=e132]:
+          - button "ESP32 NodeMCU WROVER" [ref=e133] [cursor=pointer]:
+            - img "ESP32 NodeMCU WROVER" [ref=e135]
+          - generic [ref=e136]:
+            - button "ESP32 NodeMCU WROVER" [ref=e137] [cursor=pointer]:
+              - paragraph [ref=e138]: ESP32 NodeMCU WROVER
+            - generic [ref=e139]:
+              - paragraph [ref=e140]: K800
+              - button "Add ESP32 NodeMCU WROVER to cart" [ref=e141] [cursor=pointer]:
+                - img [ref=e142]
+                - text: Add
+        - generic [ref=e143]:
+          - button "ESP32 S3 devitc WIFI+BLUETOOTH" [ref=e144] [cursor=pointer]:
+            - img "ESP32 S3 devitc WIFI+BLUETOOTH" [ref=e146]
+          - generic [ref=e147]:
+            - button "ESP32 S3 devitc WIFI+BLUETOOTH" [ref=e148] [cursor=pointer]:
+              - paragraph [ref=e149]: ESP32 S3 devitc WIFI+BLUETOOTH
+            - generic [ref=e150]:
+              - paragraph [ref=e151]: K1000
+              - button "Add ESP32 S3 devitc WIFI+BLUETOOTH to cart" [ref=e152] [cursor=pointer]:
+                - img [ref=e153]
+                - text: Add
+        - generic [ref=e154]:
+          - button "ESP32 WiFi Module + OV2640 CAM" [ref=e155] [cursor=pointer]:
+            - img "ESP32 WiFi Module + OV2640 CAM" [ref=e157]
+          - generic [ref=e158]:
+            - button "ESP32 WiFi Module + OV2640 CAM" [ref=e159] [cursor=pointer]:
+              - paragraph [ref=e160]: ESP32 WiFi Module + OV2640 CAM
+            - generic [ref=e161]:
+              - paragraph [ref=e162]: K800
+              - button "Add ESP32 WiFi Module + OV2640 CAM to cart" [ref=e163] [cursor=pointer]:
+                - img [ref=e164]
+                - text: Add
+        - generic [ref=e165]:
+          - button "ESP8266 NodeMCU" [ref=e166] [cursor=pointer]:
+            - img "ESP8266 NodeMCU" [ref=e168]
+          - generic [ref=e169]:
+            - button "ESP8266 NodeMCU" [ref=e170] [cursor=pointer]:
+              - paragraph [ref=e171]: ESP8266 NodeMCU
+            - generic [ref=e172]:
+              - paragraph [ref=e173]: K800
+              - button "Add ESP8266 NodeMCU to cart" [ref=e174] [cursor=pointer]:
+                - img [ref=e175]
+                - text: Add
+        - generic [ref=e176]:
+          - button "ZY-ESP32 WIFI+BLUETOOTH" [ref=e177] [cursor=pointer]:
+            - img "ZY-ESP32 WIFI+BLUETOOTH" [ref=e179]
+          - generic [ref=e180]:
+            - button "ZY-ESP32 WIFI+BLUETOOTH" [ref=e181] [cursor=pointer]:
+              - paragraph [ref=e182]: ZY-ESP32 WIFI+BLUETOOTH
+            - generic [ref=e183]:
+              - paragraph [ref=e184]: K800
+              - button "Add ZY-ESP32 WIFI+BLUETOOTH to cart" [ref=e185] [cursor=pointer]:
+                - img [ref=e186]
+                - text: Add
+        - generic [ref=e187]:
+          - button "10k Potentiometer" [ref=e188] [cursor=pointer]:
+            - img "10k Potentiometer" [ref=e190]
+          - generic [ref=e191]:
+            - button "10k Potentiometer" [ref=e192] [cursor=pointer]:
+              - paragraph [ref=e193]: 10k Potentiometer
+            - generic [ref=e194]:
+              - paragraph [ref=e195]: K100
+              - button "Add 10k Potentiometer to cart" [ref=e196] [cursor=pointer]:
+                - img [ref=e197]
+                - text: Add
+        - generic [ref=e198]:
+          - button "1M Trimmer Potentiometer" [ref=e199] [cursor=pointer]:
+            - img "1M Trimmer Potentiometer" [ref=e201]
+          - generic [ref=e202]:
+            - button "1M Trimmer Potentiometer" [ref=e203] [cursor=pointer]:
+              - paragraph [ref=e204]: 1M Trimmer Potentiometer
+            - generic [ref=e205]:
+              - paragraph [ref=e206]: K100
+              - button "Add 1M Trimmer Potentiometer to cart" [ref=e207] [cursor=pointer]:
+                - img [ref=e208]
+                - text: Add
+        - generic [ref=e209]:
+          - button "ACS712 Current Sensor" [ref=e210] [cursor=pointer]:
+            - img "ACS712 Current Sensor" [ref=e212]
+          - generic [ref=e213]:
+            - button "ACS712 Current Sensor" [ref=e214] [cursor=pointer]:
+              - paragraph [ref=e215]: ACS712 Current Sensor
+            - generic [ref=e216]:
+              - paragraph [ref=e217]: K250
+              - button "Add ACS712 Current Sensor to cart" [ref=e218] [cursor=pointer]:
+                - img [ref=e219]
+                - text: Add
+        - generic [ref=e220]:
+          - button "Arduino Sound Sensor" [ref=e221] [cursor=pointer]:
+            - img "Arduino Sound Sensor" [ref=e223]
+          - generic [ref=e224]:
+            - button "Arduino Sound Sensor" [ref=e225] [cursor=pointer]:
+              - paragraph [ref=e226]: Arduino Sound Sensor
+            - generic [ref=e227]:
+              - paragraph [ref=e228]: K250
+              - button "Add Arduino Sound Sensor to cart" [ref=e229] [cursor=pointer]:
+                - img [ref=e230]
+                - text: Add
+        - generic [ref=e231]:
+          - button "DHT11 Temp & Humidity Sensor" [ref=e232] [cursor=pointer]:
+            - img "DHT11 Temp & Humidity Sensor" [ref=e234]
+          - generic [ref=e235]:
+            - button "DHT11 Temp & Humidity Sensor" [ref=e236] [cursor=pointer]:
+              - paragraph [ref=e237]: DHT11 Temp & Humidity Sensor
+            - generic [ref=e238]:
+              - paragraph [ref=e239]: K250
+              - button "Add DHT11 Temp & Humidity Sensor to cart" [ref=e240] [cursor=pointer]:
+                - img [ref=e241]
+                - text: Add
+        - generic [ref=e242]:
+          - button "Fingerprint sensor FPM10A" [ref=e243] [cursor=pointer]:
+            - img "Fingerprint sensor FPM10A" [ref=e245]
+          - generic [ref=e246]:
+            - button "Fingerprint sensor FPM10A" [ref=e247] [cursor=pointer]:
+              - paragraph [ref=e248]: Fingerprint sensor FPM10A
+            - generic [ref=e249]:
+              - paragraph [ref=e250]: K950
+              - button "Add Fingerprint sensor FPM10A to cart" [ref=e251] [cursor=pointer]:
+                - img [ref=e252]
+                - text: Add
+        - generic [ref=e253]:
+          - button "HC-SR04 Ultrasonic Sensor" [ref=e254] [cursor=pointer]:
+            - img "HC-SR04 Ultrasonic Sensor" [ref=e256]
+          - generic [ref=e257]:
+            - button "HC-SR04 Ultrasonic Sensor" [ref=e258] [cursor=pointer]:
+              - paragraph [ref=e259]: HC-SR04 Ultrasonic Sensor
+            - generic [ref=e260]:
+              - paragraph [ref=e261]: K250
+              - button "Add HC-SR04 Ultrasonic Sensor to cart" [ref=e262] [cursor=pointer]:
+                - img [ref=e263]
+                - text: Add
+        - generic [ref=e264]:
+          - button "IR Obstacle Avoidance Sensor" [ref=e265] [cursor=pointer]:
+            - img "IR Obstacle Avoidance Sensor" [ref=e267]
+          - generic [ref=e268]:
+            - button "IR Obstacle Avoidance Sensor" [ref=e269] [cursor=pointer]:
+              - paragraph [ref=e270]: IR Obstacle Avoidance Sensor
+            - generic [ref=e271]:
+              - paragraph [ref=e272]: K250
+              - button "Add IR Obstacle Avoidance Sensor to cart" [ref=e273] [cursor=pointer]:
+                - img [ref=e274]
+                - text: Add
+        - generic [ref=e275]:
+          - button "LM35 Temperature Sensor" [ref=e276] [cursor=pointer]:
+            - img "LM35 Temperature Sensor" [ref=e278]
+          - generic [ref=e279]:
+            - button "LM35 Temperature Sensor" [ref=e280] [cursor=pointer]:
+              - paragraph [ref=e281]: LM35 Temperature Sensor
+            - generic [ref=e282]:
+              - paragraph [ref=e283]: K250
+              - button "Add LM35 Temperature Sensor to cart" [ref=e284] [cursor=pointer]:
+                - img [ref=e285]
+                - text: Add
+        - generic [ref=e286]:
+          - button "MQ-135 Air Quality Sensor" [ref=e287] [cursor=pointer]:
+            - img "MQ-135 Air Quality Sensor" [ref=e289]
+          - generic [ref=e290]:
+            - button "MQ-135 Air Quality Sensor" [ref=e291] [cursor=pointer]:
+              - paragraph [ref=e292]: MQ-135 Air Quality Sensor
+            - generic [ref=e293]:
+              - paragraph [ref=e294]: K300
+              - button "Add MQ-135 Air Quality Sensor to cart" [ref=e295] [cursor=pointer]:
+                - img [ref=e296]
+                - text: Add
+        - generic [ref=e297]:
+          - button "MQ-2 Smoke & LPG Gas Sensor" [ref=e298] [cursor=pointer]:
+            - img "MQ-2 Smoke & LPG Gas Sensor" [ref=e300]
+          - generic [ref=e301]:
+            - button "MQ-2 Smoke & LPG Gas Sensor" [ref=e302] [cursor=pointer]:
+              - paragraph [ref=e303]: MQ-2 Smoke & LPG Gas Sensor
+            - generic [ref=e304]:
+              - paragraph [ref=e305]: K250
+              - button "Add MQ-2 Smoke & LPG Gas Sensor to cart" [ref=e306] [cursor=pointer]:
+                - img [ref=e307]
+                - text: Add
+        - generic [ref=e308]:
+          - button "MQ-3 Gas Sensor" [ref=e309] [cursor=pointer]:
+            - img "MQ-3 Gas Sensor" [ref=e311]
+          - generic [ref=e312]:
+            - button "MQ-3 Gas Sensor" [ref=e313] [cursor=pointer]:
+              - paragraph [ref=e314]: MQ-3 Gas Sensor
+            - generic [ref=e315]:
+              - paragraph [ref=e316]: K250
+              - button "Add MQ-3 Gas Sensor to cart" [ref=e317] [cursor=pointer]:
+                - img [ref=e318]
+                - text: Add
+        - generic [ref=e319]:
+          - button "MQ-7 Carbon Monoxide & Gas Sensor" [ref=e320] [cursor=pointer]:
+            - img "MQ-7 Carbon Monoxide & Gas Sensor" [ref=e322]
+          - generic [ref=e323]:
+            - button "MQ-7 Carbon Monoxide & Gas Sensor" [ref=e324] [cursor=pointer]:
+              - paragraph [ref=e325]: MQ-7 Carbon Monoxide & Gas Sensor
+            - generic [ref=e326]:
+              - paragraph [ref=e327]: K300
+              - button "Add MQ-7 Carbon Monoxide & Gas Sensor to cart" [ref=e328] [cursor=pointer]:
+                - img [ref=e329]
+                - text: Add
+        - generic [ref=e330]:
+          - button "PIR Motion Sensor HC-SR501" [ref=e331] [cursor=pointer]:
+            - img "PIR Motion Sensor HC-SR501" [ref=e333]
+          - generic [ref=e334]:
+            - button "PIR Motion Sensor HC-SR501" [ref=e335] [cursor=pointer]:
+              - paragraph [ref=e336]: PIR Motion Sensor HC-SR501
+            - generic [ref=e337]:
+              - paragraph [ref=e338]: K250
+              - button "Add PIR Motion Sensor HC-SR501 to cart" [ref=e339] [cursor=pointer]:
+                - img [ref=e340]
+                - text: Add
+        - generic [ref=e341]:
+          - button "Pulse Heart Rate Sensor" [ref=e342] [cursor=pointer]:
+            - img "Pulse Heart Rate Sensor" [ref=e344]
+          - generic [ref=e345]:
+            - button "Pulse Heart Rate Sensor" [ref=e346] [cursor=pointer]:
+              - paragraph [ref=e347]: Pulse Heart Rate Sensor
+            - generic [ref=e348]:
+              - paragraph [ref=e349]: K250
+              - button "Add Pulse Heart Rate Sensor to cart" [ref=e350] [cursor=pointer]:
+                - img [ref=e351]
+                - text: Add
+        - generic [ref=e352]:
+          - button "PZEM V3.0 Multi-Sensor" [ref=e353] [cursor=pointer]:
+            - img "PZEM V3.0 Multi-Sensor" [ref=e355]
+          - generic [ref=e356]:
+            - button "PZEM V3.0 Multi-Sensor" [ref=e357] [cursor=pointer]:
+              - paragraph [ref=e358]: PZEM V3.0 Multi-Sensor
+            - generic [ref=e359]:
+              - paragraph [ref=e360]: K1500
+              - button "Add PZEM V3.0 Multi-Sensor to cart" [ref=e361] [cursor=pointer]:
+                - img [ref=e362]
+                - text: Add
+        - generic [ref=e363]:
+          - button "Soil Moisture Sensor" [ref=e364] [cursor=pointer]:
+            - img "Soil Moisture Sensor" [ref=e366]
+          - generic [ref=e367]:
+            - button "Soil Moisture Sensor" [ref=e368] [cursor=pointer]:
+              - paragraph [ref=e369]: Soil Moisture Sensor
+            - generic [ref=e370]:
+              - paragraph [ref=e371]: K250
+              - button "Add Soil Moisture Sensor to cart" [ref=e372] [cursor=pointer]:
+                - img [ref=e373]
+                - text: Add
+        - generic [ref=e374]:
+          - button "ZMPT101B Voltage Sensor" [ref=e375] [cursor=pointer]:
+            - img "ZMPT101B Voltage Sensor" [ref=e377]
+          - generic [ref=e378]:
+            - button "ZMPT101B Voltage Sensor" [ref=e379] [cursor=pointer]:
+              - paragraph [ref=e380]: ZMPT101B Voltage Sensor
+            - generic [ref=e381]:
+              - paragraph [ref=e382]: K300
+              - button "Add ZMPT101B Voltage Sensor to cart" [ref=e383] [cursor=pointer]:
+                - img [ref=e384]
+                - text: Add
+        - generic [ref=e385]:
+          - button "16x2 LCD with I2C" [ref=e386] [cursor=pointer]:
+            - img "16x2 LCD with I2C" [ref=e388]
+          - generic [ref=e389]:
+            - button "16x2 LCD with I2C" [ref=e390] [cursor=pointer]:
+              - paragraph [ref=e391]: 16x2 LCD with I2C
+            - generic [ref=e392]:
+              - paragraph [ref=e393]: K350
+              - button "Add 16x2 LCD with I2C to cart" [ref=e394] [cursor=pointer]:
+                - img [ref=e395]
+                - text: Add
+        - generic [ref=e396]:
+          - button "20x4 LCD Display" [ref=e397] [cursor=pointer]:
+            - img "20x4 LCD Display" [ref=e399]
+          - generic [ref=e400]:
+            - button "20x4 LCD Display" [ref=e401] [cursor=pointer]:
+              - paragraph [ref=e402]: 20x4 LCD Display
+            - generic [ref=e403]:
+              - paragraph [ref=e404]: K450
+              - button "Add 20x4 LCD Display to cart" [ref=e405] [cursor=pointer]:
+                - img [ref=e406]
+                - text: Add
+        - generic [ref=e407]:
+          - button "4x4 Membrane Keypad" [ref=e408] [cursor=pointer]:
+            - img "4x4 Membrane Keypad" [ref=e410]
+          - generic [ref=e411]:
+            - button "4x4 Membrane Keypad" [ref=e412] [cursor=pointer]:
+              - paragraph [ref=e413]: 4x4 Membrane Keypad
+            - generic [ref=e414]:
+              - paragraph [ref=e415]: K250
+              - button "Add 4x4 Membrane Keypad to cart" [ref=e416] [cursor=pointer]:
+                - img [ref=e417]
+                - text: Add
+        - generic [ref=e418]:
+          - button "Micro SD Card Module" [ref=e419] [cursor=pointer]:
+            - img "Micro SD Card Module" [ref=e421]
+          - generic [ref=e422]:
+            - button "Micro SD Card Module" [ref=e423] [cursor=pointer]:
+              - paragraph [ref=e424]: Micro SD Card Module
+            - generic [ref=e425]:
+              - paragraph [ref=e426]: K250
+              - button "Add Micro SD Card Module to cart" [ref=e427] [cursor=pointer]:
+                - img [ref=e428]
+                - text: Add
+        - generic [ref=e429]:
+          - button "RFID Reader Set" [ref=e430] [cursor=pointer]:
+            - img "RFID Reader Set" [ref=e432]
+          - generic [ref=e433]:
+            - button "RFID Reader Set" [ref=e434] [cursor=pointer]:
+              - paragraph [ref=e435]: RFID Reader Set
+            - generic [ref=e436]:
+              - paragraph [ref=e437]: K300
+              - button "Add RFID Reader Set to cart" [ref=e438] [cursor=pointer]:
+                - img [ref=e439]
+                - text: Add
+        - generic [ref=e440]:
+          - button "SIM800L GSM Module + Antenna" [ref=e441] [cursor=pointer]:
+            - img "SIM800L GSM Module + Antenna" [ref=e443]
+          - generic [ref=e444]:
+            - button "SIM800L GSM Module + Antenna" [ref=e445] [cursor=pointer]:
+              - paragraph [ref=e446]: SIM800L GSM Module + Antenna
+            - generic [ref=e447]:
+              - paragraph [ref=e448]: K800
+              - button "Add SIM800L GSM Module + Antenna to cart" [ref=e449] [cursor=pointer]:
+                - img [ref=e450]
+                - text: Add
+        - generic [ref=e451]:
+          - button "SIM900 GSM GPRS Shield" [ref=e452] [cursor=pointer]:
+            - img "SIM900 GSM GPRS Shield" [ref=e454]
+          - generic [ref=e455]:
+            - button "SIM900 GSM GPRS Shield" [ref=e456] [cursor=pointer]:
+              - paragraph [ref=e457]: SIM900 GSM GPRS Shield
+            - generic [ref=e458]:
+              - paragraph [ref=e459]: K1000
+              - button "Add SIM900 GSM GPRS Shield to cart" [ref=e460] [cursor=pointer]:
+                - img [ref=e461]
+                - text: Add
+        - generic [ref=e462]:
+          - button "45g SpringRC Servo Motor" [ref=e463] [cursor=pointer]:
+            - img "45g SpringRC Servo Motor" [ref=e465]
+          - generic [ref=e466]:
+            - button "45g SpringRC Servo Motor" [ref=e467] [cursor=pointer]:
+              - paragraph [ref=e468]: 45g SpringRC Servo Motor
+            - generic [ref=e469]:
+              - paragraph [ref=e470]: K650
+              - button "Add 45g SpringRC Servo Motor to cart" [ref=e471] [cursor=pointer]:
+                - img [ref=e472]
+                - text: Add
+        - generic [ref=e473]:
+          - button "9g servo motors" [ref=e474] [cursor=pointer]:
+            - img "9g servo motors" [ref=e476]
+          - generic [ref=e477]:
+            - button "9g servo motors" [ref=e478] [cursor=pointer]:
+              - paragraph [ref=e479]: 9g servo motors
+            - generic [ref=e480]:
+              - paragraph [ref=e481]: K200
+              - button "Add 9g servo motors to cart" [ref=e482] [cursor=pointer]:
+                - img [ref=e483]
+                - text: Add
+        - generic [ref=e484]:
+          - button "L293D Motor Driver IC" [ref=e485] [cursor=pointer]:
+            - img "L293D Motor Driver IC" [ref=e487]
+          - generic [ref=e488]:
+            - button "L293D Motor Driver IC" [ref=e489] [cursor=pointer]:
+              - paragraph [ref=e490]: L293D Motor Driver IC
+            - generic [ref=e491]:
+              - paragraph [ref=e492]: K100
+              - button "Add L293D Motor Driver IC to cart" [ref=e493] [cursor=pointer]:
+                - img [ref=e494]
+                - text: Add
+        - generic [ref=e495]:
+          - button "L298N Motor Driver" [ref=e496] [cursor=pointer]:
+            - img "L298N Motor Driver" [ref=e498]
+          - generic [ref=e499]:
+            - button "L298N Motor Driver" [ref=e500] [cursor=pointer]:
+              - paragraph [ref=e501]: L298N Motor Driver
+            - generic [ref=e502]:
+              - paragraph [ref=e503]: K250
+              - button "Add L298N Motor Driver to cart" [ref=e504] [cursor=pointer]:
+                - img [ref=e505]
+                - text: Add
+        - generic [ref=e506]:
+          - button "Nema 17 Stepper Motor" [ref=e507] [cursor=pointer]:
+            - img "Nema 17 Stepper Motor" [ref=e509]
+          - generic [ref=e510]:
+            - button "Nema 17 Stepper Motor" [ref=e511] [cursor=pointer]:
+              - paragraph [ref=e512]: Nema 17 Stepper Motor
+            - generic [ref=e513]:
+              - paragraph [ref=e514]: K650
+              - button "Add Nema 17 Stepper Motor to cart" [ref=e515] [cursor=pointer]:
+                - img [ref=e516]
+                - text: Add
+        - generic [ref=e517]:
+          - button "TB6600 Stepper Motor Driver" [ref=e518] [cursor=pointer]:
+            - img "TB6600 Stepper Motor Driver" [ref=e520]
+          - generic [ref=e521]:
+            - button "TB6600 Stepper Motor Driver" [ref=e522] [cursor=pointer]:
+              - paragraph [ref=e523]: TB6600 Stepper Motor Driver
+            - generic [ref=e524]:
+              - paragraph [ref=e525]: K800
+              - button "Add TB6600 Stepper Motor Driver to cart" [ref=e526] [cursor=pointer]:
+                - img [ref=e527]
+                - text: Add
+        - generic [ref=e528]:
+          - button "5V 1-Channel Relay Screw" [ref=e529] [cursor=pointer]:
+            - img "5V 1-Channel Relay Screw" [ref=e531]
+          - generic [ref=e532]:
+            - button "5V 1-Channel Relay Screw" [ref=e533] [cursor=pointer]:
+              - paragraph [ref=e534]: 5V 1-Channel Relay Screw
+            - generic [ref=e535]:
+              - paragraph [ref=e536]: K150
+              - button "Add 5V 1-Channel Relay Screw to cart" [ref=e537] [cursor=pointer]:
+                - img [ref=e538]
+                - text: Add
+        - generic [ref=e539]:
+          - button "5V 10A Single-Channel Relay" [ref=e540] [cursor=pointer]:
+            - img "5V 10A Single-Channel Relay" [ref=e542]
+          - generic [ref=e543]:
+            - button "5V 10A Single-Channel Relay" [ref=e544] [cursor=pointer]:
+              - paragraph [ref=e545]: 5V 10A Single-Channel Relay
+            - generic [ref=e546]:
+              - paragraph [ref=e547]: K150
+              - button "Add 5V 10A Single-Channel Relay to cart" [ref=e548] [cursor=pointer]:
+                - img [ref=e549]
+                - text: Add
+        - generic [ref=e550]:
+          - button "5V 2-Channel Relay Jumper" [ref=e551] [cursor=pointer]:
+            - img "5V 2-Channel Relay Jumper" [ref=e553]
+          - generic [ref=e554]:
+            - button "5V 2-Channel Relay Jumper" [ref=e555] [cursor=pointer]:
+              - paragraph [ref=e556]: 5V 2-Channel Relay Jumper
+            - generic [ref=e557]:
+              - paragraph [ref=e558]: K250
+              - button "Add 5V 2-Channel Relay Jumper to cart" [ref=e559] [cursor=pointer]:
+                - img [ref=e560]
+                - text: Add
+        - generic [ref=e561]:
+          - button "5V 2-Channel Relay Screw" [ref=e562] [cursor=pointer]:
+            - img "5V 2-Channel Relay Screw" [ref=e564]
+          - generic [ref=e565]:
+            - button "5V 2-Channel Relay Screw" [ref=e566] [cursor=pointer]:
+              - paragraph [ref=e567]: 5V 2-Channel Relay Screw
+            - generic [ref=e568]:
+              - paragraph [ref=e569]: K250
+              - button "Add 5V 2-Channel Relay Screw to cart" [ref=e570] [cursor=pointer]:
+                - img [ref=e571]
+                - text: Add
+        - generic [ref=e572]:
+          - button "5V 4-Channel Relay Module" [ref=e573] [cursor=pointer]:
+            - img "5V 4-Channel Relay Module" [ref=e575]
+          - generic [ref=e576]:
+            - button "5V 4-Channel Relay Module" [ref=e577] [cursor=pointer]:
+              - paragraph [ref=e578]: 5V 4-Channel Relay Module
+            - generic [ref=e579]:
+              - paragraph [ref=e580]: K350
+              - button "Add 5V 4-Channel Relay Module to cart" [ref=e581] [cursor=pointer]:
+                - img [ref=e582]
+                - text: Add
+        - generic [ref=e583]:
+          - button "7805 / 7812 Voltage Regulators" [ref=e584] [cursor=pointer]:
+            - img "7805 / 7812 Voltage Regulators" [ref=e586]
+          - generic [ref=e587]:
+            - button "7805 / 7812 Voltage Regulators" [ref=e588] [cursor=pointer]:
+              - paragraph [ref=e589]: 7805 / 7812 Voltage Regulators
+            - generic [ref=e590]:
+              - paragraph [ref=e591]: K65
+              - button "Add 7805 / 7812 Voltage Regulators to cart" [ref=e592] [cursor=pointer]:
+                - img [ref=e593]
+                - text: Add
+        - generic [ref=e594]:
+          - button "9V 1A DC Power Supply" [ref=e595] [cursor=pointer]:
+            - img "9V 1A DC Power Supply" [ref=e597]
+          - generic [ref=e598]:
+            - button "9V 1A DC Power Supply" [ref=e599] [cursor=pointer]:
+              - paragraph [ref=e600]: 9V 1A DC Power Supply
+            - generic [ref=e601]:
+              - paragraph [ref=e602]: K300
+              - button "Add 9V 1A DC Power Supply to cart" [ref=e603] [cursor=pointer]:
+                - img [ref=e604]
+                - text: Add
+        - generic [ref=e605]:
+          - button "9V Battery Clip Holder with DC Jack" [ref=e606] [cursor=pointer]:
+            - img "9V Battery Clip Holder with DC Jack" [ref=e608]
+          - generic [ref=e609]:
+            - button "9V Battery Clip Holder with DC Jack" [ref=e610] [cursor=pointer]:
+              - paragraph [ref=e611]: 9V Battery Clip Holder with DC Jack
+            - generic [ref=e612]:
+              - paragraph [ref=e613]: K95
+              - button "Add 9V Battery Clip Holder with DC Jack to cart" [ref=e614] [cursor=pointer]:
+                - img [ref=e615]
+                - text: Add
+        - generic [ref=e616]:
+          - button "9V Battery Non-rechargeable" [ref=e617] [cursor=pointer]:
+            - img "9V Battery Non-rechargeable" [ref=e619]
+          - generic [ref=e620]:
+            - button "9V Battery Non-rechargeable" [ref=e621] [cursor=pointer]:
+              - paragraph [ref=e622]: 9V Battery Non-rechargeable
+            - generic [ref=e623]:
+              - paragraph [ref=e624]: K85
+              - button "Add 9V Battery Non-rechargeable to cart" [ref=e625] [cursor=pointer]:
+                - img [ref=e626]
+                - text: Add
+        - generic [ref=e627]:
+          - button "9V Snap Power Cable with DC Jack" [ref=e628] [cursor=pointer]:
+            - img "9V Snap Power Cable with DC Jack" [ref=e630]
+          - generic [ref=e631]:
+            - button "9V Snap Power Cable with DC Jack" [ref=e632] [cursor=pointer]:
+              - paragraph [ref=e633]: 9V Snap Power Cable with DC Jack
+            - generic [ref=e634]:
+              - paragraph [ref=e635]: K95
+              - button "Add 9V Snap Power Cable with DC Jack to cart" [ref=e636] [cursor=pointer]:
+                - img [ref=e637]
+                - text: Add
+        - generic [ref=e638]:
+          - button "LM2596 DC-DC Step-down Module" [ref=e639] [cursor=pointer]:
+            - img "LM2596 DC-DC Step-down Module" [ref=e641]
+          - generic [ref=e642]:
+            - button "LM2596 DC-DC Step-down Module" [ref=e643] [cursor=pointer]:
+              - paragraph [ref=e644]: LM2596 DC-DC Step-down Module
+            - generic [ref=e645]:
+              - paragraph [ref=e646]: K250
+              - button "Add LM2596 DC-DC Step-down Module to cart" [ref=e647] [cursor=pointer]:
+                - img [ref=e648]
+                - text: Add
+        - generic [ref=e649]:
+          - button "170 Point Breadboard" [ref=e650] [cursor=pointer]:
+            - img "170 Point Breadboard" [ref=e652]
+          - generic [ref=e653]:
+            - button "170 Point Breadboard" [ref=e654] [cursor=pointer]:
+              - paragraph [ref=e655]: 170 Point Breadboard
+            - generic [ref=e656]:
+              - paragraph [ref=e657]: K130
+              - button "Add 170 Point Breadboard to cart" [ref=e658] [cursor=pointer]:
+                - img [ref=e659]
+                - text: Add
+        - generic [ref=e660]:
+          - button "400P Breadboard" [ref=e661] [cursor=pointer]:
+            - img "400P Breadboard" [ref=e663]
+          - generic [ref=e664]:
+            - button "400P Breadboard" [ref=e665] [cursor=pointer]:
+              - paragraph [ref=e666]: 400P Breadboard
+            - generic [ref=e667]:
+              - paragraph [ref=e668]: K200
+              - button "Add 400P Breadboard to cart" [ref=e669] [cursor=pointer]:
+                - img [ref=e670]
+                - text: Add
+        - generic [ref=e671]:
+          - button "830 Point Breadboard" [ref=e672] [cursor=pointer]:
+            - img "830 Point Breadboard" [ref=e674]
+          - generic [ref=e675]:
+            - button "830 Point Breadboard" [ref=e676] [cursor=pointer]:
+              - paragraph [ref=e677]: 830 Point Breadboard
+            - generic [ref=e678]:
+              - paragraph [ref=e679]: K350
+              - button "Add 830 Point Breadboard to cart" [ref=e680] [cursor=pointer]:
+                - img [ref=e681]
+                - text: Add
+        - generic [ref=e682]:
+          - button "Breadboard Jumper Wires per piece" [ref=e683] [cursor=pointer]:
+            - img "Breadboard Jumper Wires per piece" [ref=e685]
+          - generic [ref=e686]:
+            - button "Breadboard Jumper Wires per piece" [ref=e687] [cursor=pointer]:
+              - paragraph [ref=e688]: Breadboard Jumper Wires per piece
+            - generic [ref=e689]:
+              - paragraph [ref=e690]: K8
+              - button "Add Breadboard Jumper Wires per piece to cart" [ref=e691] [cursor=pointer]:
+                - img [ref=e692]
+                - text: Add
+        - generic [ref=e693]:
+          - button "DFPlayer Mini MP3 Module" [ref=e694] [cursor=pointer]:
+            - img "DFPlayer Mini MP3 Module" [ref=e696]
+          - generic [ref=e697]:
+            - button "DFPlayer Mini MP3 Module" [ref=e698] [cursor=pointer]:
+              - paragraph [ref=e699]: DFPlayer Mini MP3 Module
+            - generic [ref=e700]:
+              - paragraph [ref=e701]: K200
+              - button "Add DFPlayer Mini MP3 Module to cart" [ref=e702] [cursor=pointer]:
+                - img [ref=e703]
+                - text: Add
+        - generic [ref=e704]:
+          - button "NE555 Timer IC" [ref=e705] [cursor=pointer]:
+            - img "NE555 Timer IC" [ref=e707]
+          - generic [ref=e708]:
+            - button "NE555 Timer IC" [ref=e709] [cursor=pointer]:
+              - paragraph [ref=e710]: NE555 Timer IC
+            - generic [ref=e711]:
+              - paragraph [ref=e712]: K105
+              - button "Add NE555 Timer IC to cart" [ref=e713] [cursor=pointer]:
+                - img [ref=e714]
+                - text: Add
+        - generic [ref=e715]:
+          - button "12V DC Small Electromagnetic Lock" [ref=e716] [cursor=pointer]:
+            - img "12V DC Small Electromagnetic Lock" [ref=e718]
+          - generic [ref=e719]:
+            - button "12V DC Small Electromagnetic Lock" [ref=e720] [cursor=pointer]:
+              - paragraph [ref=e721]: 12V DC Small Electromagnetic Lock
+            - generic [ref=e722]:
+              - paragraph [ref=e723]: K350
+              - button "Add 12V DC Small Electromagnetic Lock to cart" [ref=e724] [cursor=pointer]:
+                - img [ref=e725]
+                - text: Add
+        - generic [ref=e726]:
+          - button "20KG Load Cell + HX711 Module" [ref=e727] [cursor=pointer]:
+            - img "20KG Load Cell + HX711 Module" [ref=e729]
+          - generic [ref=e730]:
+            - button "20KG Load Cell + HX711 Module" [ref=e731] [cursor=pointer]:
+              - paragraph [ref=e732]: 20KG Load Cell + HX711 Module
+            - generic [ref=e733]:
+              - paragraph [ref=e734]: K450
+              - button "Add 20KG Load Cell + HX711 Module to cart" [ref=e735] [cursor=pointer]:
+                - img [ref=e736]
+                - text: Add
+        - generic [ref=e737]:
+          - button "2N4402 Transistor" [ref=e738] [cursor=pointer]:
+            - img "2N4402 Transistor" [ref=e740]
+          - generic [ref=e741]:
+            - button "2N4402 Transistor" [ref=e742] [cursor=pointer]:
+              - paragraph [ref=e743]: 2N4402 Transistor
+            - generic [ref=e744]:
+              - paragraph [ref=e745]: K25
+              - button "Add 2N4402 Transistor to cart" [ref=e746] [cursor=pointer]:
+                - img [ref=e747]
+                - text: Add
+        - generic [ref=e748]:
+          - button "5v non submissable pump +battery" [ref=e749] [cursor=pointer]:
+            - img "5v non submissable pump +battery" [ref=e751]
+          - generic [ref=e752]:
+            - button "5v non submissable pump +battery" [ref=e753] [cursor=pointer]:
+              - paragraph [ref=e754]: 5v non submissable pump +battery
+            - generic [ref=e755]:
+              - paragraph [ref=e756]: K350
+              - button "Add 5v non submissable pump +battery to cart" [ref=e757] [cursor=pointer]:
+                - img [ref=e758]
+                - text: Add
+        - generic [ref=e759]:
+          - button "DS3231 RTC Clock Module" [ref=e760] [cursor=pointer]:
+            - img "DS3231 RTC Clock Module" [ref=e762]
+          - generic [ref=e763]:
+            - button "DS3231 RTC Clock Module" [ref=e764] [cursor=pointer]:
+              - paragraph [ref=e765]: DS3231 RTC Clock Module
+            - generic [ref=e766]:
+              - paragraph [ref=e767]: K250
+              - button "Add DS3231 RTC Clock Module to cart" [ref=e768] [cursor=pointer]:
+                - img [ref=e769]
+                - text: Add
+        - generic [ref=e770]:
+          - button "LEDs" [ref=e771] [cursor=pointer]:
+            - img "LEDs" [ref=e773]
+          - generic [ref=e774]:
+            - button "LEDs" [ref=e775] [cursor=pointer]:
+              - paragraph [ref=e776]: LEDs
+            - generic [ref=e777]:
+              - paragraph [ref=e778]: K10
+              - button "Add LEDs to cart" [ref=e779] [cursor=pointer]:
+                - img [ref=e780]
+                - text: Add
+        - generic [ref=e781]:
+          - button "PAM8403 Audio Amplifier Module" [ref=e782] [cursor=pointer]:
+            - img "PAM8403 Audio Amplifier Module" [ref=e784]
+          - generic [ref=e785]:
+            - button "PAM8403 Audio Amplifier Module" [ref=e786] [cursor=pointer]:
+              - paragraph [ref=e787]: PAM8403 Audio Amplifier Module
+            - generic [ref=e788]:
+              - paragraph [ref=e789]: K120
+              - button "Add PAM8403 Audio Amplifier Module to cart" [ref=e790] [cursor=pointer]:
+                - img [ref=e791]
+                - text: Add
+        - generic [ref=e792]:
+          - button "Push Button Switch" [ref=e793] [cursor=pointer]:
+            - img "Push Button Switch" [ref=e795]
+          - generic [ref=e796]:
+            - button "Push Button Switch" [ref=e797] [cursor=pointer]:
+              - paragraph [ref=e798]: Push Button Switch
+            - generic [ref=e799]:
+              - paragraph [ref=e800]: K25
+              - button "Add Push Button Switch to cart" [ref=e801] [cursor=pointer]:
+                - img [ref=e802]
+                - text: Add
+        - generic [ref=e803]:
+          - button "Resistors" [ref=e804] [cursor=pointer]:
+            - img "Resistors" [ref=e806]
+          - generic [ref=e807]:
+            - button "Resistors" [ref=e808] [cursor=pointer]:
+              - paragraph [ref=e809]: Resistors
+            - generic [ref=e810]:
+              - paragraph [ref=e811]: K20
+              - button "Add Resistors to cart" [ref=e812] [cursor=pointer]:
+                - img [ref=e813]
+                - text: Add
+        - generic [ref=e814]:
+          - button "USB to TTL Converter" [ref=e815] [cursor=pointer]:
+            - img "USB to TTL Converter" [ref=e817]
+          - generic [ref=e818]:
+            - button "USB to TTL Converter" [ref=e819] [cursor=pointer]:
+              - paragraph [ref=e820]: USB to TTL Converter
+            - generic [ref=e821]:
+              - paragraph [ref=e822]: K250
+              - button "Add USB to TTL Converter to cart" [ref=e823] [cursor=pointer]:
+                - img [ref=e824]
+                - text: Add
+    - contentinfo [ref=e825]:
+      - paragraph [ref=e826]: Countrywide delivery available. FREE delivery up to K50 (T&Cs apply).
+      - paragraph [ref=e827]:
+        - text: "Website:"
+        - link "giftedsolutions-53124.web.app" [ref=e828] [cursor=pointer]:
+          - /url: https://giftedsolutions-53124.web.app/
+  - alert [ref=e829]
+```

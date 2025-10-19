@@ -1,14 +1,28 @@
 import { render, screen } from '@testing-library/react';
 import { Header } from '@/components/Header';
+import { useCartStore } from '@/store/cart';
 
 // Mock the cart store
-jest.mock('@/store/cart', () => ({
-  useCartStore: () => ({
-    getItemCount: jest.fn(() => 3),
-  }),
-}));
+jest.mock('@/store/cart');
+
+const mockUseCartStore = useCartStore as jest.MockedFunction<typeof useCartStore>;
 
 describe('Header Component', () => {
+  beforeEach(() => {
+    mockUseCartStore.mockImplementation((selector: any) => {
+      const state = {
+        items: [],
+        addItem: jest.fn(),
+        removeItem: jest.fn(),
+        updateQuantity: jest.fn(),
+        clearCart: jest.fn(),
+        getItemCount: () => 3,
+        getTotal: () => 0,
+      };
+      return selector ? selector(state) : state;
+    });
+  });
+
   it('renders the header with business name', () => {
     render(<Header />);
     

@@ -47,7 +47,7 @@ export const whatsappService = {
  * Format currency for Zambian Kwacha
  */
 export const formatCurrency = (amount: number): string => {
-  return `K${amount.toFixed(2).replace(/\.00$/, '')}`;
+  return `K${amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 };
 
 /**
