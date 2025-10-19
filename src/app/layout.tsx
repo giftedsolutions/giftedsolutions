@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import { env } from '@/config/env';
 
@@ -42,6 +43,10 @@ export const metadata: Metadata = {
     description: 'Your one-stop shop for Arduino and electronics components in Zambia',
     type: 'website',
   },
+  icons: {
+    icon: '/favicon.png',
+    apple: '/icon-192.png',
+  },
 };
 
 export default function RootLayout({
@@ -51,22 +56,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <head>
-        <link rel="icon" href="/favicon.png" />
-        <link rel="apple-touch-icon" href="/icon-192.png" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              if ('serviceWorker' in navigator) {
-                window.addEventListener('load', () => {
-                  navigator.serviceWorker.register('/sw.js');
-                });
-              }
-            `,
-          }}
-        />
-      </head>
-      <body className="min-h-screen bg-[#fefefe] text-gray-900 antialiased">{children}</body>
+      <body className="min-h-screen bg-[#fefefe] text-gray-900 antialiased">
+        {children}
+        <Script id="register-sw" strategy="afterInteractive">
+          {`
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+              });
+            }
+          `}
+        </Script>
+      </body>
     </html>
   );
 }
